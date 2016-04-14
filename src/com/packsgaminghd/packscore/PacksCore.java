@@ -1,16 +1,15 @@
-package net.lulzcraft.packsnetworkmod;
+package com.packsgaminghd.packscore;
 
 import net.pravian.aero.command.handler.AeroCommandHandler;
 import net.pravian.aero.command.handler.SimpleCommandHandler;
-import net.lulzcraft.packsnetworkmod.command.Command_packscore;
+import com.packsgaminghd.packscore.command.Command_packscore;
 import net.pravian.aero.config.YamlConfig;
 import net.pravian.aero.plugin.AeroPlugin;
 import net.pravian.aero.util.Loggers;
-import org.bukkit.plugin.PluginManager;
 
-public class PacksNetwork extends AeroPlugin<PacksNetwork> 
+public class PacksCore extends AeroPlugin<PacksCore> 
 {
-    public static PacksNetwork plugin;
+    public static PacksCore plugin;
     public static AeroCommandHandler handler;
     //
     public Loggers logger;
@@ -20,7 +19,7 @@ public class PacksNetwork extends AeroPlugin<PacksNetwork>
     @Override
     public void load()
     {
-        PacksNetwork.plugin = this;
+        PacksCore.plugin = this;
         Loggers.info(plugin.getName() + " has been loaded");
         mainConfig = new YamlConfig(plugin, "config.yml");
     }
@@ -28,7 +27,7 @@ public class PacksNetwork extends AeroPlugin<PacksNetwork>
     @Override
     public void enable()
     {
-        PacksNetwork.plugin = this;
+        PacksCore.plugin = this;
         mainConfig.load();
         
         handler = new SimpleCommandHandler(plugin);
@@ -37,14 +36,14 @@ public class PacksNetwork extends AeroPlugin<PacksNetwork>
         handler.registerAll();
         
         Loggers.info(plugin.getName() + " has been enabled");
-        Loggers.info(plugin.getName() + " v" + plugin.getVersion() + " created by " + plugin.getAuthor());
+        Loggers.info(plugin.getName() + " v" + plugin.getVersion() + " created by " + plugin.getAuthors());
                 
     }
     
     @Override
     public void disable()
     {
-        PacksNetwork.plugin = null;
+        PacksCore.plugin = null;
         Loggers.info(plugin.getName() + "disabled");
     }
 }

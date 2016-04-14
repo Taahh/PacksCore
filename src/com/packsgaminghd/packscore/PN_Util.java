@@ -1,4 +1,4 @@
-package net.lulzcraft.packsnetworkmod;
+package com.packsgaminghd.packscore;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
@@ -11,8 +11,8 @@ public class PN_Util {
         String name = sender.getName();
         
         for (Player player : Bukkit.getOnlinePlayers()) {
-            if (player.hasPermission("pnm.adminchat.see")) {
-                player.sendMessage(ChatColor.GRAY + "[" + ChatColor.BLUE + "Admin Chat" + ChatColor.GRAY + "] " + ChatColor.DARK_RED + name + ChatColor.WHITE + ": " + ChatColor.GOLD + message);
+            if (player.hasPermission("packscore.adminchat.see")) {
+                player.sendMessage(ChatColor.GRAY + "[" + ChatColor.BLUE + "AdminChat" + ChatColor.GRAY + "] " + ChatColor.BLUE + name + ChatColor.WHITE + ": " + ChatColor.AQUA + message);
             }
             
         }

@@ -1,7 +1,7 @@
-package net.lulzcraft.packsnetworkmod.command;
+package com.packsgaminghd.packscore.command;
 
-import net.lulzcraft.packsnetworkmod.PN_Util;
-import net.lulzcraft.packsnetworkmod.PacksNetwork;
+import com.packsgaminghd.packscore.PN_Util;
+import com.packsgaminghd.packscore.PacksCore;
 import net.md_5.bungee.api.ChatColor;
 import net.pravian.aero.command.CommandOptions;
 import net.pravian.aero.command.SimpleCommand;
@@ -14,7 +14,7 @@ import org.bukkit.command.CommandSender;
         permission = "pnm.adminchat", 
         aliases = "o", 
         source = SourceType.ANY)
-public class Command_adminchat extends SimpleCommand<PacksNetwork> {
+public class Command_adminchat extends SimpleCommand<PacksCore> {
 
     @Override
     public boolean onCommand(CommandSender cs, Command cmnd, String string, String[] strings) {
@@ -25,7 +25,7 @@ public class Command_adminchat extends SimpleCommand<PacksNetwork> {
         }
         
         if (!sender.hasPermission("pnm.adminchat")) {
-            sender.sendMessage(ChatColor.BLUE + "No permissions, you must be an admin+");
+            sender.sendMessage(ChatColor.RED + "PacksCore :: No permission");
             return false;
         }
         
