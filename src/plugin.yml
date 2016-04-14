@@ -1,0 +1,13 @@
+name: PacksCore
+version: 0.5
+main: net.lulzcraft.packsnetworkmod.PacksNetwork
+description: A Utility plugin for PacksNetwork!
+softdepend: [Aero]
+authors: [TPhoenixG, PacksGamingHD]
+commands:
+    packscore:
+        description: Shows information about PacksCore
+        usage: /<command>
+    adminchat:
+        description: Talk to other admins
+        usage: /<command> <message>
