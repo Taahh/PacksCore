@@ -1,1 +1,9 @@
-You may not remove any code or credits, and may not edit the plugin name in the plugin.yml
+# License
+
+1. You cannot remove any of the creators names in any files including plugin.yml:
+- PacksGamingHD
+- TPhoenixG
+
+2. You cannot distribute this plugin and call it your own
+
+3. Please refrain from copying any of this code
